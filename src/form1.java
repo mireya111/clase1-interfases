@@ -1,18 +1,41 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class form1 {
-    private JTextArea textArea1;
-    private JButton button1;
-    private JList list1;
-    private JRadioButton mireyaPrueba1RadioButton;
-    private JRadioButton mireyaPruba2RadioButton;
-    private JEditorPane editorPane1;
-    private JComboBox comboBox1;
-    private JTextField textField1;
-    private JCheckBox holACheckBox;
-    private JCheckBox hola2CheckBox;
+    private JButton nombre;
+    private JButton borrar;
+    public JPanel mi;
+    private JTextArea saludos;
+    private JButton imprimir;
+    private JTextField ingreso;
+    private JLabel labiel2;
+    private JLabel label1;
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
+    public form1(){
+        nombre.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                labiel2.setText("Mireya Prueba");
+            }
+        });
+        borrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                labiel2.setText(" ");
+            }
+        });
+        imprimir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                labiel2.setText(saludos.getText());
+            }
+        });
+        imprimir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                labiel2.setText(ingreso.getText());
+            }
+        });
     }
 }
